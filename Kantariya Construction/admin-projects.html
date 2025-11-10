@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Projects | Kantariya Construction</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* General */
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Navbar */
+        
+        .navbar {
+            background-color: #2563EB !important;
+        }
+        
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #D1FAE5 !important;
+        }
+        
+        .btn-primary {
+            background-color: #10B981;
+            border: none;
+            transition: 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0EA674;
+            transform: translateY(-2px);
+        }
+        /* Header */
+        
+        header {
+            background-color: #E0F2FE;
+            padding: 70px 0;
+            text-align: center;
+            border-bottom: 3px solid #2563EB;
+        }
+        
+        header h1 {
+            font-weight: 700;
+        }
+        
+        header p {
+            color: #475569;
+        }
+        /* Cards */
+        
+        .project-section {
+            padding: 60px 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+        
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .card-body h5 {
+            color: #2563EB;
+            font-weight: 700;
+        }
+        
+        .btn-outline-primary {
+            border-color: #2563EB;
+            color: #2563EB;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: #2563EB;
+            color: #fff;
+        }
+        
+        .btn-outline-danger:hover {
+            transform: scale(1.05);
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #1E293B;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        /* Responsive */
+        
+        @media (max-width: 767px) {
+            header {
+                padding: 50px 20px;
+            }
+            .card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="admin-dashboard.html">Kantariya Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="admin-dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admin-projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-messages.html">Messages</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-3" href="index.html">View Site</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header data-aos="fade-down">
+        <div class="container">
+            <h1>Manage Projects</h1>
+            <p>View, edit, and organize all construction projects here.</p>
+            <a href="admin-add-project.html" class="btn btn-primary mt-3 shadow-sm">Add New Project</a>
+        </div>
+    </header>
+
+    <!-- Projects -->
+    <section class="project-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <img src="img/Residential_Main.jpg" alt="Residential Building" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Residential Building</h5>
+                            <p class="text-muted mb-3">Ahmedabad, Gujarat</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="admin-edit-project.html?id=1" class="btn btn-sm btn-outline-primary">Edit</a>
+                                <button class="btn btn-sm btn-outline-danger" onclick="deleteProject('Residential Building')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <img src="img/Commercial_Main.jpeg" alt="Commercial Complex" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Commercial Complex</h5>
+                            <p class="text-muted mb-3">Rajkot, Gujarat</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="admin-edit-project.html?id=2" class="btn btn-sm btn-outline-primary">Edit</a>
+                                <button class="btn btn-sm btn-outline-danger" onclick="deleteProject('Commercial Complex')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <img src="img/Bridge_intoriar.jpeg" alt="Highway Bridge" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Highway Bridge</h5>
+                            <p class="text-muted mb-3">Surat, Gujarat</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="admin-edit-project.html?id=3" class="btn btn-sm btn-outline-primary">Edit</a>
+                                <button class="btn btn-sm btn-outline-danger" onclick="deleteProject('Highway Bridge')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer data-aos="fade-up">
+        <div class="container">
+            <p>&copy; 2025 Kantariya Construction. Admin Panel.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        // Delete confirmation
+        function deleteProject(name) {
+            if (confirm(`Are you sure you want to delete "${name}"?`)) {
+                alert(`"${name}" has been deleted successfully.`);
+                // Here you can add logic to actually remove it or update database later.
+            }
+        }
+    </script>
+
+</body>
+
+</html>

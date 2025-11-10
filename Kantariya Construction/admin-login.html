@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kantariya Construction | Admin Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            max-width: 480px;
+            width: 100%;
+            padding: 50px 40px;
+            animation: fadeIn .6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        
+        .brand h4 {
+            font-weight: 600;
+            color: #3564dc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        
+        p.text-muted {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #ced4da;
+        }
+        
+        .btn-danger {
+            background: #0d6efd;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .btn-danger:hover {
+            background: #0d6efd;
+        }
+        
+        .link-btn {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .link-btn:hover {
+            text-decoration: underline;
+        }
+        
+        .text-center.mt-3 {
+            margin-top: 20px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="brand">
+            <h4>Admin Login</h4>
+        </div>
+        <h3 class="text-center mb-1">Dashboard Access</h3>
+        <p class="text-center text-muted mb-4">Authorized personnel only</p>
+
+        <form id="adminForm" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="adminEmail">Admin Email</label>
+                <input id="adminEmail" type="email" class="form-control" placeholder="Enter admin email" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="adminPassword">Password</label>
+                <input id="adminPassword" type="password" class="form-control" placeholder="Enter password" required minlength="6">
+                <div class="invalid-feedback">Password must be at least 6 characters.</div>
+            </div>
+
+            <button class="btn btn-danger w-100" type="submit">Login as Admin</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>Go back to <a href="login.html" class="link-btn">User Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        const adminForm = document.getElementById('adminForm');
+        adminForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!adminForm.checkValidity()) {
+                adminForm.classList.add('was-validated');
+                return;
+            }
+            // Demo: successful admin
+            alert('Admin login successful!');
+            window.location.href = 'admin-dashboard.html';
+        });
+    </script>
+</body>
+
+</html>

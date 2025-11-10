@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+.container {
+    padding-left: 20%;
+}
+
+#myform {
+    width: 60%;
+    background-color: white;
+    height: auto;
+    padding-left: 20%;
+}
+
+#user,
+#emails,
+#pass,
+#cpass,
+#num {
+    width: 30%;
+    height: 30px;
+    background-color: #ddd;
+}
+
+#btn {
+    width: 30%;
+    height: 30px;
+    background-color: green;
+    color: white;
+}
+
+#usr,
+#eml,
+#pas,
+#cpas,
+#nm {
+    color: red;
+    font-weight: bold;
+}

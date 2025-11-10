@@ -1,0 +1,187 @@
+:root {
+    --primary: #2563EB;
+    --accent: #10B981;
+    --bg: #F8FAFC;
+    --muted: #6B7280;
+    --text: #111827;
+    --card-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    --radius: 0.6rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navbar uses Bootstrap classes; small helper */
+
+.navbar-brand {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .nav-link {
+    color: #374151 !important;
+    font-weight: 600;
+}
+
+.navbar .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.navbar .btn-primary:hover {
+    background-color: var(--accent);
+}
+
+
+/* Header (small hero for admin pages) */
+
+.header-admin {
+    background: #fff;
+    padding: 36px 0;
+    border-bottom: 1px solid #E6EEF8;
+}
+
+.header-admin h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header-admin p {
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+
+/* Cards and layout */
+
+.container-admin {
+    padding: 32px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    border: 0;
+}
+
+.card-small {
+    padding: 20px;
+    text-align: center;
+    border-radius: .75rem;
+}
+
+
+/* card numbers */
+
+.kpi-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.kpi-label {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+
+/* tables */
+
+.table thead th {
+    background: #F3F6FB;
+    border: 0;
+    font-weight: 700;
+    color: #374151;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+
+/* buttons */
+
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+/* small animations (CSS-only) */
+
+.fade-in {
+    animation: fadeIn .45s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* cards hover */
+
+.card:hover {
+    transform: translateY(-6px);
+    transition: transform .18s ease;
+}
+
+
+/* forms */
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+
+/* footer */
+
+.site-footer {
+    background: #0F172A;
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+}
+
+
+/* responsive tweaks */
+
+@media (max-width: 767px) {
+    .header-admin {
+        padding: 22px 16px;
+        text-align: left;
+    }
+    .navbar .nav-link {
+        font-size: .95rem;
+    }
+}
